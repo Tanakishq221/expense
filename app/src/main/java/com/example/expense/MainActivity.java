@@ -1,6 +1,5 @@
 package com.example.expense;
 
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
@@ -73,16 +72,16 @@ public class MainActivity extends AppCompatActivity {
     private void loadIncomeData() {
         Cursor cursor = db.getAllIncome();
         String[] from = {DatabaseHelper.COLUMN_AMOUNT, DatabaseHelper.COLUMN_DETAILS, DatabaseHelper.COLUMN_TIMESTAMP};
-        int[] to = {android.R.id.text1, android.R.id.text2};
-        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_2, cursor, from, to, 0);
+        int[] to = {R.id.text1, R.id.text2};
+        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.list_item, cursor, from, to, 0);
         listView.setAdapter(adapter);
     }
 
     private void loadExpenseData() {
         Cursor cursor = db.getAllExpenses();
         String[] from = {DatabaseHelper.COLUMN_AMOUNT, DatabaseHelper.COLUMN_DETAILS, DatabaseHelper.COLUMN_TIMESTAMP};
-        int[] to = {android.R.id.text1, android.R.id.text2};
-        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_2, cursor, from, to, 0);
+        int[] to = {R.id.text1, R.id.text2};
+        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.list_item, cursor, from, to, 0);
         listViewexpense.setAdapter(adapter);
     }
 

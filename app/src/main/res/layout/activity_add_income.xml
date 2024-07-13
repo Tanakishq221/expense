@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@drawable/img">
+    android:background="@drawable/gradient_background">
 
     <EditText
         android:id="@+id/edittext1"
@@ -15,7 +15,8 @@
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:textColorHint="#FFFFFF"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textColor="@color/white"/>
 
     <EditText
         android:id="@+id/edittext2"
@@ -25,7 +26,8 @@
         android:hint="Details"
         android:minHeight="48dp"
         android:textColorHint="#FFFFFF"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textColor="@color/white"/>
 
 
     <Button

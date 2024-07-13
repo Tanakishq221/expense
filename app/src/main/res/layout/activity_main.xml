@@ -3,7 +3,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img">
+    android:background="@drawable/gradient_background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:elevation="4dp"
-                card_view:cardBackgroundColor="#FF0000"
+                card_view:cardBackgroundColor="#CF0000"
                 card_view:cardCornerRadius="16dp">
 
                 <LinearLayout
@@ -60,7 +60,7 @@
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:elevation="4dp"
-                card_view:cardBackgroundColor="#008000"
+                card_view:cardBackgroundColor="#028000"
                 card_view:cardCornerRadius="16dp">
 
                 <LinearLayout
