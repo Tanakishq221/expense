@@ -1,5 +1,6 @@
 package com.example.expense;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.Button;
@@ -70,4 +71,5 @@ public class addincomeactivity extends AppCompatActivity {
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_2, cursor, from, to, 0);
         listViewIncome.setAdapter(adapter);
     }
+
 }

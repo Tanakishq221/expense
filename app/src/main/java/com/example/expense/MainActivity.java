@@ -44,11 +44,7 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(intent, REQUEST_CODE_ADD_INCOME);
         });
 
-        updateTotalIncome();
-        updateTotalExpense();
-        updateTotalSavings();
-        loadIncomeData();
-        loadExpenseData();
+        refreshData();
     }
 
     private void updateTotalIncome() {
@@ -85,19 +81,20 @@ public class MainActivity extends AppCompatActivity {
         listViewexpense.setAdapter(adapter);
     }
 
+    private void refreshData() {
+        updateTotalIncome();
+        updateTotalExpense();
+        updateTotalSavings();
+        loadIncomeData();
+        loadExpenseData();
+
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
-            if (requestCode == REQUEST_CODE_ADD_INCOME) {
-                updateTotalIncome();
-                updateTotalSavings();
-                loadIncomeData();
-            } else if (requestCode == REQUEST_CODE_ADD_EXPENSE) {
-                updateTotalExpense();
-                updateTotalSavings();
-                loadExpenseData();
-            }
+            refreshData();
         }
     }
 }
