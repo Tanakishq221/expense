@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, AddExpenseActivity.class);
             startActivityForResult(intent, REQUEST_CODE_ADD_EXPENSE);
         });
+        refreshData();
 
         addIncomeButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, addincomeactivity.class);
